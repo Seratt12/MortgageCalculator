@@ -1,0 +1,20 @@
+D:\C#\Mortgage calculator\bin\Debug\net6.0-windows\Mortgage calculator.exe
+D:\C#\Mortgage calculator\bin\Debug\net6.0-windows\Mortgage calculator.deps.json
+D:\C#\Mortgage calculator\bin\Debug\net6.0-windows\Mortgage calculator.runtimeconfig.json
+D:\C#\Mortgage calculator\bin\Debug\net6.0-windows\Mortgage calculator.dll
+D:\C#\Mortgage calculator\bin\Debug\net6.0-windows\Mortgage calculator.pdb
+D:\C#\Mortgage calculator\obj\Debug\net6.0-windows\Mortgage calculator.csproj.AssemblyReference.cache
+D:\C#\Mortgage calculator\obj\Debug\net6.0-windows\Mortgage calculator.csproj.GenerateResource.cache
+D:\C#\Mortgage calculator\obj\Debug\net6.0-windows\Mortgage calculator.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\Mortgage calculator\obj\Debug\net6.0-windows\Mortgage calculator.AssemblyInfoInputs.cache
+D:\C#\Mortgage calculator\obj\Debug\net6.0-windows\Mortgage calculator.AssemblyInfo.cs
+D:\C#\Mortgage calculator\obj\Debug\net6.0-windows\Mortgage calculator.csproj.CoreCompileInputs.cache
+D:\C#\Mortgage calculator\obj\Debug\net6.0-windows\Mortgage calculator.dll
+D:\C#\Mortgage calculator\obj\Debug\net6.0-windows\refint\Mortgage calculator.dll
+D:\C#\Mortgage calculator\obj\Debug\net6.0-windows\Mortgage calculator.pdb
+D:\C#\Mortgage calculator\obj\Debug\net6.0-windows\Mortgage calculator.genruntimeconfig.cache
+D:\C#\Mortgage calculator\obj\Debug\net6.0-windows\ref\Mortgage calculator.dll
+D:\C#\Mortgage calculator\bin\Debug\net6.0-windows\ru\Mortgage calculator.resources.dll
+D:\C#\Mortgage calculator\obj\Debug\net6.0-windows\Mortgage_calculator.FormMain.resources
+D:\C#\Mortgage calculator\obj\Debug\net6.0-windows\Mortgage_calculator.FormMain.ru.resources
+D:\C#\Mortgage calculator\obj\Debug\net6.0-windows\ru\Mortgage calculator.resources.dll
