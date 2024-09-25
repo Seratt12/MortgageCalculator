@@ -1,15 +1,72 @@
 using System.Diagnostics;
 using System.Numerics;
+using System.Data.SQLite;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Mortgage_calculator
 {
     public partial class FormMain : Form
     {
+        DataBase dataBase = new DataBase();
+
+
         bool isTrue = false;
 
         public FormMain()
         {
             InitializeComponent();
+        }
+
+        private void CreateColumns()
+        {
+            dgv.Columns.Add("Стоимость жилья (руб.)", "Стоимость жилья (руб.)");
+            dgv.Columns.Add("Ставка (%)", "Ставка (%)");
+            dgv.Columns.Add("Срок (лет)", "Срок (лет)");
+            dgv.Columns.Add("Первоначальный взнос (руб)", "Первоначальный взнос (руб)");
+            dgv.Columns.Add("Вид ипотечных платежей (0 - анн., 1 - диф)", "Вид ипотечных платежей (0 - анн., 1 - диф)");
+            dgv.Columns.Add("Ежемесячный платёж (руб.)", "Ежемесячный платёж (руб.)");
+            dgv.Columns.Add("Погашение долга (руб.)", "Погашение долга (руб.)");
+            dgv.Columns.Add("Процентная часть (руб.)", "Процентная часть (руб.)");
+        }
+
+
+        private void RefreshDataGrid(DataGridView dgw)
+        {
+            dgw.Rows.Clear();
+
+            string queryString = $"select * from calculate";
+
+            dataBase.OpenConnection();
+
+            SQLiteCommand command = new SQLiteCommand(queryString, dataBase.getConnection());
+
+            SQLiteDataReader reader = command.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    var fullPrice = reader.GetValue(0);
+                    var Procent = reader.GetValue(1);
+                    var Period = reader.GetValue(2);
+                    var InitialPayment = reader.GetValue(3);
+                    var TypeOfPayment = reader.GetValue(4);
+                    var MonthlyPayment = reader.GetValue(5);
+                    var DebtRepayment = reader.GetValue(6);
+                    var PercentagePart = reader.GetValue(7);
+                    var id = reader.GetValue(8);
+
+                    dgv.Rows.Add(fullPrice, Procent, Period, InitialPayment, TypeOfPayment, MonthlyPayment, DebtRepayment, PercentagePart);
+                }
+            }
+            reader.Close();
+        }
+
+        private void MainForm_load(object sender, EventArgs e)
+        {
+            CreateColumns();
+            RefreshDataGrid(dgv);
         }
 
         private void label2_Click(object sender, EventArgs e)
